@@ -1,8 +1,5 @@
-import           Data.List
-
-main = putStrLn $ show $ sum $ nub $ m3 ++ m5
+main = putStrLn $ show $ sum multiples
   where
-    m3 = multipleOf 3
-    m5 = multipleOf 5
-    multipleOf number = filter (\n -> n `mod` number == 0) numbers
+    multiples = filter predicate numbers
+    predicate n = (n `mod` 3 == 0) || (n `mod` 5 == 0)
     numbers = [0 .. 999]
