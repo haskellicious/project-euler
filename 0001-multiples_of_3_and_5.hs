@@ -1,4 +1,4 @@
-main = putStrLn $ show $ sum multiples
+main = print $ sum multiples
   where
     multiples = filter predicate numbers
     predicate n = (n `mod` 3 == 0) || (n `mod` 5 == 0)
